@@ -1,0 +1,91 @@
+<section>
+    <div class="bg"></div>
+    <div class="container-section">
+        <div class="header">
+            <h1>Our Collection</h1>
+            <p>
+                Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins,
+                expertly roasted in small batches and shipped fresh weekly.
+            </p>
+            <div class="container-buttons">
+                <button class="active" id="btn-all" (click)="allProductsActive()">All Products</button>
+                <button (click)="availableNowActive()">Available Now</button>
+            </div>
+        </div>
+        <div class="container-list-coffee">
+            @if(allproducts){
+
+            <ul>
+                @for (coffee of coffees; track coffee){
+                <div class="item">
+                    @defer (on viewport) {
+                    <li>
+                        @if (coffee.popular === true){
+                        <div class="popular">Popular</div>
+                        }
+                        <img src="{{ coffee.image }}" />
+                    </li>
+                    } @placeholder {
+                    <div class="loading"></div>
+                    }@loading {
+                    <p>Carregando imagem...</p>
+                    } @error {
+                    Carregamento falhou!
+                    }
+                    <div class="info">
+                        <li>{{ coffee.name }}</li>
+                        <li class="price">{{ coffee.price}}</li>
+                    </div>
+                    <div class="info-2">
+                        <div class="container-votes">
+                            @if(coffee.votes != 0){
+                            <img src="../assets/Star_fill.svg" />
+                            <li>{{ coffee.rating }}</li>
+                            <li class="votes">({{ coffee.votes }} votes)</li>
+                            } @else {
+                            <img src="../assets/Star.svg" />
+                            <li class="votes">No rating</li>
+                            }
+                        </div>
+                        <div class="container-sold">
+                            @if (coffee.available === false){
+                            <li class="sold">sold out</li>
+                            }
+                        </div>
+                    </div>
+                </div>
+                }
+            </ul>
+            }@else{
+            <ul>
+                @for (coffee of coffeesAvailable; track $index) {
+                <div class="item">
+                    <li>
+                        @if (coffee.popular === true){
+                        <div class="popular">Popular</div>
+                        }
+                        <img src="{{ coffee.image }}" />
+                    </li>
+                    <div class="info">
+                        <li>{{ coffee.name }}</li>
+                        <li class="price">{{ coffee.price}}</li>
+                    </div>
+                    <div class="info-2">
+                        <div class="container-votes">
+                            @if(coffee.votes != 0){
+                            <img src="../assets/Star_fill.svg" />
+                            <li>{{ coffee.rating }}</li>
+                            <li class="votes">({{ coffee.votes }} votes)</li>
+                            } @else {
+                            <img src="../assets/Star.svg" />
+                            <li class="votes">No rating</li>
+                            }
+                        </div>
+                    </div>
+                </div>
+                }
+            </ul>
+            }
+        </div>
+    </div>
+</section>
