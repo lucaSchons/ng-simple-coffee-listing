@@ -1,27 +1,18 @@
-# SimpleCoffeeListing
+[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-D4FAFF?style=for-the-badge&logo=typescript
+[ANGULAR__BADGE]: https://img.shields.io/badge/Angular-red?style=for-the-badge&logo=angular
+[PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
+[PROJECT__URL]: https://ng-devchallenge.web.app/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+<h1 align="center" style="font-weight: bold;">Desafio Simple Coffee Listing</h1>
 
-## Development server
+![angular][ANGULAR__BADGE]
+![typescript][TYPESCRIPT__BADGE]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<h2>📌 Sobre</h2>
+Projeto desenvolvido a partir do desafio Simple Coffee Listing do site devchallenges.io.
+Principal objetivo foi aprender novos conceitos do Angular 17, como o uso de Control Flows e Deferrable views.
 
-## Code scaffolding
+Link para o desafio: https://devchallenges.io/challenge/simple-coffee-listing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[![project][PROJECT__BADGE]][PROJECT__URL]
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
